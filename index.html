@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lead Wise - Home</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header & Navigation -->
+  <header class="text-white sticky top-0 z-50 shadow" style="background-color: #6f933d;">
+    <div class="container mx-auto flex items-center justify-between py-3 px-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/leadwise_logo.png" alt="Lead wise Logo" class="h-20 w-30 rounded-full bg-white p-2"/>
+        <!-- <span class="font-bold text-xl tracking-wide">Lead Wise</span> -->
+      </div>
+      <nav>
+        <ul class="hidden md:flex items-center space-x-6 font-medium">
+          <li><a href="index.html" class="hover:text-green-200 transition">Home</a></li>
+          <li><a href="ourteam.html" class="hover:text-green-200 transition">Our Team</a></li>
+          <li class="relative group">
+  <button class="flex items-center gap-1 hover:text-green-200 project-dropdown-btn">
+    Project
+    <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
+  </button>
+  <ul class="absolute opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto bg-green-600 shadow rounded transition-all duration-500">
+  <li><a href="gallery.html" class="inline-block px-4 py-2 hover:bg-green-100">Gallery</a></li>
+  <li><a href="documents.html" class="inline-block px-4 py-2 hover:bg-green-100">Documents</a></li>
+</ul>
+</li>
+          <li class="relative group">
+            <button class="flex items-center gap-1 hover:text-green-200">
+              Programs
+              <svg class="w-4 h-4" fill="none" stroke="currentColor"><use href="#chevron-down"></use></svg>
+            </button>
+            <ul class="absolute opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto bg-green-600 shadow rounded transition-all duration-500">
+              <li><a href="internship.html" class="block px-4 py-2 hover:bg-green-100">Internship</a></li>
+              <li><a href="consultancy.html" class="block px-4 py-2 hover:bg-green-100">Consultancy</a></li>
+              <li><a href="training.html" class="block px-4 py-2 hover:bg-green-100">Training</a></li>
+              <li><a href="seminar.html" class="block px-4 py-2 hover:bg-green-100">Supplies</a></li>
+              <li><a href="supplies.html" class="block px-4 py-2 hover:bg-green-100">Supplies</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="hover:text-green-200 transition">Contact Us</a></li>
+          <li>
+            <!-- <a href="#" class="bg-white text-green-700 px-4 py-2 rounded-full shadow hover:bg-green-100 font-semibold transition">Donate</a> -->
+          </li>
+        </ul>
+        <!-- Hamburger -->
+        <button id="hamburger" class="md:hidden flex items-center">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor"><use href="#menu"></use></svg>
+        </button>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-green-800">
+      <ul class="flex flex-col space-y-2 p-4 font-medium">
+        <li><a href="index.html" class="block hover:text-green-300">Home</a></li>
+        <li><a href="ourteam.html" class="block hover:text-green-300">Our Team</a></li>
+        <li>
+          <details>
+            <summary class="cursor-pointer hover:text-green-300">Project</summary>
+            <ul class="pl-4">
+              <li><a href="gallery.html" class="block hover:text-green-300">Gallery</a></li>
+              <li><a href="documents.html" class="block hover:text-green-300">Documents</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary class="cursor-pointer hover:text-green-300">Programs</summary>
+            <ul class="pl-4">
+              <li><a href="internship.html" class="block hover:text-green-300">Internship</a></li>
+              <li><a href="consultancy.html" class="block hover:text-green-300">Consultancy</a></li>
+              <li><a href="training.html" class="block hover:text-green-300">Training</a></li>
+              <li><a href="seminar.html" class="block hover:text-green-300">Seminar</a></li>
+              <li><a href="supplies.html" class="block hover:text-green-300">Supplies</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="contact.html" class="block hover:text-green-300">Contact Us</a></li>
+        <li>
+          <!-- <a href="#" class="block bg-white text-green-700 px-4 py-2 rounded-full shadow hover:bg-green-100 font-semibold">Donate</a> -->
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="flex-1 min-h-[130vh]">
+    <!-- Carousel -->
+    <section class="relative overflow-hidden bg-gray-200">
+  <div id="carousel" class="relative w-full h-64 md:h-96 overflow-hidden">
+    <div class="absolute inset-0 flex transition-transform duration-700" id="carousel-slides">
+      <img src="assets/ceo_img.png" alt="Slide 1" class="flex-shrink-0 w-full h-full object-contain"/>
+      <img src="assets/photo6.png" alt="Slide 1" class="flex-shrink-0 w-full h-full object-contain"/>
+      <img src="assets/South_Sudan_Flag.jpg" alt="Slide 1" class="flex-shrink-0 w-full h-full object-contain"/>
+      <!-- <img src="assets/features-South-Sudan.jpg" alt="Slide 4" class="flex-shrink-0 w-full h-full object-cover"/> -->
+    </div>
+    <!-- Carousel Controls -->
+    <button id="prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-green-900/60 text-white p-2 rounded-full hover:bg-green-700 z-10">
+      <svg class="w-6 h-6"><use href="#chevron-left"></use></svg>
+    </button>
+    <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-green-900/60 text-white p-2 rounded-full hover:bg-green-700 z-10">
+      <svg class="w-6 h-6"><use href="#chevron-right"></use></svg>
+    </button>
+    <!-- Indicators -->
+    <div id="indicators" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10"></div>
+  </div>
+</section>
+     
+    <!-- About Us -->
+    <section class="container mx-auto py-10 px-2" id="about">
+  <h2 class="text-3xl font-bold text-green-700 mb-0">About Us</h2>
+  <div class="grid md:grid-cols-2 gap-1 items-center">
+    <div>
+      <p class="text-lg mb-2">Leadwise is a professional consultancy firm established in 2012 and duly registered in both Australia (ABN: 64803078970) and South Sudan (Registration No. 35957). We are a diverse team of experts with cross-sectoral experience, committed to equipping leaders in the Public, Private, NGOs, Development Agencies, civil society sectors with practical skills and strategic tools to enhance institutional effectiveness and impact.</p>
+      <p class="text-lg mb-2">We support organizations to strengthen performance, solve complex challenges, and implement tailored solutions that drive efficiency, profitability, and sustainable growth. Our work spans across business man- agement, strategic planning, leadership development, and organizational transformation ensuring our clients are equipped to thrive in dynamic environments.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><span class="font-semibold">Mission:</span> To be a catalyst for innovative change and continuous improvement empowering people, strengthening human resource capacity, and building high-performing organizations and resilient institutions for sustainable impact.</li>
+        <li><span class="font-semibold">Vision:</span> To inspire, empower, and support leaders across business, government, and civil society to drive transfor- mative change. We work to align strategy, people, culture, structure, and systems to ensure organizations achieve their goals effectively and sustainably.</li>
+      
+      <li><span class="font-semibold">Our Core Values:</span> At Leadwise, our work is guided by values we deeply believe in and consistently uphold:<br>
+          1. Integrity and Professionalism: We maintain the highest standards of ethics, accountability, and professional conduct in everything we do.<br>
+          2. Client Commitment and Partnership: We are dedicated to building strong, collaborative relation ships with our clients, grounded in trust, respect, and shared success.<br>
+          3. Continuous Improvement and Transformation: We strive for excellence through ongoing learning, innovation, and the pursuit of meaningful change
+</li></ul>
+        </div>
+        <img src="assets/Core_Values.png" alt="Our Mission" class="rounded-lg shadow-lg w-full"/>
+      </div>
+    </section>
+
+    <!-- MANAGEMENT STRUCTURE -->
+    <section class="container mx-auto py-10 px-2" id="about">
+  <h2 class="text-3xl font-bold text-green-700 mb-0">MANAGEMENT STRUCTURE</h2>
+  <div class="grid md:grid-cols-2 gap-1 items-center">
+    <div>
+      <p class="text-lg mb-2">Leadwise is led by a dynamic, award-winning MBA professional and supported by a multidisciplinary team of seasoned experts, including educators, public administrators, researchers, transport and agricultural engineers, and ICT practitioners. Together, the leadership team shares a strong commitment to transfor- mational leadership and a common goal: to empower change agents and promote sustainable develop- ment.</p>
+      <p class="text-lg mb-2">Our governance approach is informed by diverse professional experiences across South Sudan, Australia, the United Kingdom, the United States, Canada, Kenya, Uganda, and Rwanda. This international exposure strengthens our ability to deliver globally informed yet locally grounded solutions.</p>
+      <p class="text-lg mb-2">Leadwise operations are underpinned by a robust governance framework and adherence to international best practices. Our institutional policies include:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><span class="font-semibold">Protection from Sexual Exploitation and Abuse (PSEA) Policy</span> </li>
+        <li><span class="font-semibold"> 	Environmental Policy</span> </li>
+        <li><span class="font-semibold">Gender Equality and GBV Code of Conduct</span> </li>
+        <li><span class="font-semibold">Health and Safety Policy</span> </li>
+        <li><span class="font-semibold">Anti-Bribery and Corruption Policy </span> </li>
+        <li><span class="font-semibold">Conflict of Interest Policy</span> </li>
+        <li><span class="font-semibold">Child Protection Policy</span> </li>
+        <li><span class="font-semibold">Monitoring and Evaluation (M&E) Policy</span> </li>
+        <li><span class="font-semibold">Procurement Policy</span> </li>
+        <li><span class="font-semibold">Human Resources and Finance Policies</span> </li>
+        <li><span class="font-semibold">Organizational Code of Conduct</span> </li>
+        <li><span class="font-semibold">Board of Directors Oversight Procedures</span> </li>
+        <p class="text-lg mb-2">These policies ensure integrity, accountability, transparency, and ethical conduct in all aspects of our work and partnerships.</p>
+      
+      
+        </div>
+        <img src="assets/MANAGEMENT_STRUCTURE.png" alt="Our Mission" class="rounded-lg shadow-lg w-full"/>
+      </div>
+    </section>
+
+    <!-- COMPLETED PROJECTS -->
+    <section class="bg-white py-10" id="projects">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-green-700 mb-6">HIGHLIGHTS OF SUCCESSFULLY COMPLETED PROJECTS</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- project 1 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Women and Youth Leadership Programme (2024–2025)</h3>
+            <p class="mb-4 text-gray-700">Partner: UNDP, Office of the Vice President (Chair of Gender and Youth Cluster)
+                                          A one-year leadership and internship program for 200 participants focused on capacity building, mentorship, and preparing youth especially women for leadership roles and employment across South Sudan.
+             </p>
+            <!-- <a href="project1.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+          <!-- project 2 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Road Safety and Traffic Management Project</h3>
+                
+            <p class="mb-4 text-gray-700">Partners: University of Juba, JICA (2022–2024)
+                           Designed and implemented a road safety and traffic management initiative targeting drivers and pedestrians. Trained 500 drivers in defensive driving and reached 10,000 residents through safety awareness campaigns.
+                      </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 3 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Food Security and Livelihood Needs Assessments</h3>
+            <p class="mb-4 text-gray-700">Partner: Relief International (2024)
+                      Conducted multi-county assessments in Maban, Longechuk, and Melut to identify food security gaps, resilience needs, and livelihood opportunities, informing community-based interventions.
+                </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 4 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Market Assessment, Gender Analysis, and Food Security Baseline</h3>
+            <p class="mb-4 text-gray-700">Partner: USAID/RASS Activity (2022)
+                              Undertook assessments across 13 counties and 5 states, producing actionable insights on market systems, gender dynamics, and agricultural resilience.
+                    </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 5 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">WASH Baseline Survey</h3>
+            <p class="mb-4 text-gray-700">Partners: South Sudan Red Cross (Ikotos, 2020), Amref Health Africa (Maridi & Ibba, 2021)
+                   Evaluated maternal and child health, nutrition, and service coverage to inform community health strategies and programming.
+                 </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 6 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">National Education Assessment</h3>
+            <p class="mb-4 text-gray-700">Partners: UNESCO (2023) Supported the Humanitarian Needs Overview by assessing dispari- ties in education access, infrastructure, and policy implementation.
+           </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 7 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">HR and Institutional Capacity Building Program</h3>
+            <p class="mb-4 text-gray-700">Partner: UNDP (4.5 Years), CSF (2019-2022) Delivered human resources and institutional strengthening programs across 68 ministries/agencies of the Government of South Sudan.
+             </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 8 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Peace and Reconciliation Program</h3>
+            <p class="mb-4 text-gray-700">Partner: Peace Canal (June–August 2023) Facilitated community-driven peacebuilding efforts in Jonglei and Lakes State through participatory dialogue and local leadership empowerment.
+           </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 9 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Project Evaluation Services</h3>
+            <p class="mb-4 text-gray-700">Partners: UN Women, Jonglei Civil Society Network, ZOA, CSF (2020–2023)
+                                           Conducted multiple mid-terms and endline evaluations to assess impact, draw lessons learned, and enhance accountability for peacebuilding, women’s empowerment, and WASH interventions.
+                             </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+           <!-- project 10 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Child Protection and Safety Capacity Building</h3>
+            <p class="mb-4 text-gray-700">Partners: Ministry of Gender, Child, and Social Welfare – Jonglei State, UNMISS, UNHCR (2021–2022)
+                                         Trained 240 children and multiple child protection actors; established local protection committees and strengthened referral systems for abuse prevention and child safeguarding.
+                         </p>
+            <!-- <a href="project2.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+          
+          <!-- project 11 -->
+          <div class="bg-green-100 rounded-lg shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-4">Health WASH Assessment and Community Training</h3>
+            <p class="mb-4 text-gray-700">Partners: WHO, UNICEF, Life of Service Foundation, Ministry of Health (June–Dec 2023)
+                                    Conducted WASH assessments and training in Bor, Duk, Twic East, and Akobo counties, focusing on hygiene promotion, water safety, and healthcare-associated infection prevention.
+                       </p>
+            <!-- <a href="project3.html" class="mt-auto text-green-700 hover:underline font-medium">Learn more</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+          
+    <!-- Our Partners -->
+    <section class="container mx-auto py-10 px-4" id="programs">
+      <h2 class="text-3xl font-bold text-green-700 mb-6">Our Partners</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <!-- <h3 class="text-xl font-semibold mb-2">Internship</h3> -->
+          <!-- <p>Gain hands-on experience in community projects and non-profit management.</p> -->
+          <img src="assets/partners1.png" alt="Our Mission" class="rounded-lg shadow-lg w-full"/>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <!-- <h3 class="text-xl font-semibold mb-2">Consultancy</h3> -->
+          <img src="assets/partners2.png" alt="Our Mission" class="rounded-lg shadow-lg w-full"/>
+        </div>
+        <!-- <div class="bg-white p-6 rounded-lg shadow"> -->
+          <!-- <h3 class="text-xl font-semibold mb-2">Training</h3> -->
+          <!-- <img src="assets/partners1.png" alt="Our Mission" class="rounded-lg shadow-lg w-full"/> -->
+        <!-- </div> -->
+        <!-- <div class="bg-white p-6 rounded-lg shadow"> -->
+          <!-- <h3 class="text-xl font-semibold mb-2">Seminar</h3> -->
+          <!-- <p>Workshops and seminars for capacity building in areas such as leadership, finance, and technology.</p> -->
+        <!-- </div> -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <!-- <h3 class="text-xl font-semibold mb-2">Supplies</h3> -->
+          <img src="assets/partners3.png" alt="Our Mission" class="rounded-lg shadow-lg w-full"/>
+        </div>
+      </div>
+    </section>
+  </main>
+  </main>
+  </body>
+  <!-- Footer -->
+  <footer id="disappearing-footer" class="fixed bottom-0 left-0 w-full text-white text-center py-4 transition-opacity duration-300 z-50" style="background-color: #6f933d;">
+  <div class="container mx-auto py-1 px-3 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div class="mb-4 md:mb-0 flex-1">
+      <div class="flex items-center mb-1">
+        <img src="assets/leadwise_logo.png" alt="NGO Logo" class="h-17 w-20 rounded-full bg-white p-2"/>
+        <!-- <span class="ml-2 font-bold text-base">Lead Wise</span> -->
+      </div>
+      <p class="text-sm">People. Organisations. Technology</p>
+    </div>
+    <div class="mb-4 md:mb-0 flex-1">
+      <h4 class="font-bold mb-1 text-base">Quick Links</h4>
+      <ul class="space-y-0.5 text-sm">
+        <li><a href="ourteam.html" class="hover:underline">Our Team</a></li>
+        <li><a href="projects.html" class="hover:underline">Projects</a></li>
+        <li><a href="programs.html" class="hover:underline">Programs</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mb-1 md:mb-0 flex-1">
+      <h4 class="font-bold mb-1 text-base">Featured Projects</h4>
+      <ul class="space-y-0.5 text-sm">
+        <li><a href="project1.html" class="hover:underline">Clean Water Initiative</a></li>
+        <li><a href="project2.html" class="hover:underline">School Support Program</a></li>
+        <li><a href="project3.html" class="hover:underline">Health Outreach</a></li>
+      </ul>
+    </div>
+    <div class="flex-1">
+      <!-- <h4 class="font-bold mb-1 text-base">Newsletter</h4> -->
+      <!-- <form class="flex flex-col space-y-1"> -->
+        <!-- <input type="email" class="rounded px-2 py-1 text-gray-800 text-sm" placeholder="Your email address" required> -->
+        <!-- <button type="submit" class="bg-white text-green-700 font-semibold px-2 py-1 rounded hover:bg-green-100 text-sm">Subscribe</button> -->
+      <!-- </form> -->
+      <div class="flex items-center mt-2 space-x-3">
+        <a href="#" class="hover:text-green-100"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="hover:text-green-100"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-green-900 text-center py-1 text-xs">
+    &copy; 2025 lead Wise. All rights reserved.
+  </div>
+</footer>
+  <!-- Lucide SVG sprite (inline for chevron/menu icons) -->
+  <svg style="display: none;">
+    <symbol id="chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="chevron-left" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+    <symbol id="chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  </svg>
+  <!-- Lucide Icon Loader -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
